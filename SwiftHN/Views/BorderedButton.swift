@@ -14,14 +14,14 @@ import SwiftHNShared
 
     typealias buttonTouchInsideEvent = (sender: UIButton) -> ()
     // MARK: Internals views
-    var button : UIButton = UIButton(frame: CGRectZero)
+    var button = UIButton(frame: CGRectZero)
     let animationDuration = 0.15
     
     // MARK: Callback
     var onButtonTouch: buttonTouchInsideEvent!
     
     // MARK: IBSpec
-    @IBInspectable var borderColor: UIColor = UIColor.HNColor() {
+    @IBInspectable var borderColor = UIColor.HNColor() {
         didSet {
             self.layer.borderColor = borderColor.CGColor
         }
@@ -39,13 +39,13 @@ import SwiftHNShared
         }
     }
     
-    @IBInspectable var labelColor: UIColor = UIColor.HNColor() {
+    @IBInspectable var labelColor = UIColor.HNColor() {
         didSet {
             self.button.setTitleColor(labelColor, forState: .Normal)
         }
     }
     
-    @IBInspectable var labelText: String = "Default" {
+    @IBInspectable var labelText = "Default" {
         didSet {
             self.button.setTitle(labelText, forState: .Normal)
         }
